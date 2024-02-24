@@ -1,0 +1,160 @@
+.miss__cont::after {
+
+  padding-bottom: 30px;
+}
+.mission__page {
+  background-image: url("https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/v1684877508/Homepage-v3/our_mission.jpg");
+  height: 100vh;
+  width: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  -webkit-background-position: center;
+  background-position: center;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+.mission__page::after{
+  content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(21, 58, 91, 0) 0%, rgba(21, 58, 91, 0) 33.33%, rgba(21, 58, 91, 0.1) 66.67%, rgba(21, 58, 91, 0.8) 100%);
+}
+
+.miss__one {
+  width: 40%;
+  align-self: last baseline;
+  padding-left: 60px;
+  padding-right: 30px;
+  padding-bottom: 70px;
+  font-family: "Times New Roman", Times, serif;
+  z-index: 2;
+}
+.blur {
+  position: absolute;
+}
+.miss__one p {
+  padding-top: 30px;
+  max-width: 80%;
+  font-size: 20px;
+  color: white;
+  line-height: 40px;
+}
+.miss__one span {
+  font-size: 120px;
+}
+.miss__one h1 {
+  font-size: 80px;
+  color: white;
+}
+.miss__one button {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: white;
+  font-weight: 900;
+  border-radius: 100px;
+  border-color: rgb(122, 122, 122);
+  color: rgb(10, 39, 51);
+}
+
+.miss__two {
+  position: absolute;
+  width: 50%;
+  display: flex;
+  align-items: first baseline;
+  right: 0;
+  padding-top: 100px;
+  background-size: cover;
+  overflow: hidden;
+  gap: 54%;
+  z-index: 2;
+}
+.drink__img {
+  width: 100%;
+  right: 0;
+  margin-right: -50%;
+}
+.miss__two:hover {
+  transform: translateX(-15%);
+  overflow: visible;
+  transition: all 0.4s ease-in-out;
+}
+.miss__two:hover::after {
+  transform: translateY(-5%);
+  overflow: visible;
+  transition: all 0.4s ease-in-out;
+}
+.miss__two img {
+  width: 100%;
+  height: 50vh;
+  border-radius: 20px;
+}
+
+.overlay-text2 {
+  text-align: left;
+  padding-bottom: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+.overlay-text2 p {
+  width: 80%;
+}
+
+@media screen and (max-width: 1460px) {
+  .miss__two{
+    display: none;
+  }
+  .miss__one {
+    width: 100%;
+    align-self: last baseline;
+    padding-left: 60px;
+    padding-right: 30px;
+    padding-bottom: 70px;
+    font-family: "Times New Roman", Times, serif;
+    z-index: 2;
+  }
+}
+
+@media screen and (max-width: 360px) {
+
+  .miss__one {
+    width: 100%;
+    align-self: last baseline;
+    padding-left: 60px;
+    padding-right: 30px;
+    padding-bottom: 70px;
+    font-family: "Times New Roman", Times, serif;
+    z-index: 2;
+  }
+  .miss__one p {
+    padding-top: 30px;
+    max-width: 100%;
+    font-size: 15px;
+    color: white;
+    line-height: 40px;
+  }
+  .miss__one span {
+    font-size: 60px;
+  }
+  .miss__one h1 {
+    font-size: 40px;
+    color: white;
+  }
+  .miss__one button {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: white;
+    font-weight: 900;
+    border-radius: 100px;
+    border-color: rgb(122, 122, 122);
+    color: rgb(10, 39, 51);
+  }
+}

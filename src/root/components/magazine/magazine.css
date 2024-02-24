@@ -1,0 +1,123 @@
+.mag__page {
+  padding: 50px;
+}
+.mag__container {
+  display: flex;
+  justify-content: center;
+}
+.mag__img {
+  width: 350px;
+}
+.mag__button {
+  width: 100%;
+  text-align: right;
+}
+.mag__button button {
+  padding: 12px;
+  border-radius: 100px;
+}
+
+.mag_heading {
+  width: 100%;
+}
+
+.mag_heading h1 {
+  font-size: 70px;
+  padding-bottom: 20px;
+  color: rgb(10, 43, 66);
+}
+
+.mag_heading p {
+  font-size: 20px;
+  color: rgb(10, 43, 66);
+  padding-bottom: 20px;
+}
+.mag__img {
+  padding-right: 30px;
+}
+.mag__img-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.mag__img img {
+  border-radius: 20px;
+}
+.mag__img:last-child {
+  margin-right: 0;
+}
+
+.mag__text p {
+  margin-top: 20px;
+  color: #1b3953;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.mag__text a {
+  color: #1b3953;
+}
+
+.slick-dots li button {
+  width: 100px;
+  height: 2px;
+  border-radius: 100%;
+  background-color: #ccc;
+  border: none;
+  margin: 0 0px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.slick-dots li.slick-active button {
+  background-color: #021729;
+}
+/* magazine.css */
+
+/* For screens smaller than 768px (tablets) */
+@media screen and (max-width: 900px) {
+  .mag__container {
+    display: block;
+align-items: flex-start;
+    
+    }
+    .mag__button {
+      width: 100%;
+      text-align: left;
+      margin-bottom: 40px;
+    }
+}
+@media screen and (max-width: 768px) {
+  .mag_heading h1 {
+    font-size: 50px;
+  }
+
+  .mag_heading p {
+    font-size: 16px;
+  }
+
+  .mag__img {
+    width: 250px;
+  }
+
+  .mag__button button {
+    padding: 10px;
+  }
+}
+
+/* For screens smaller than 480px (phones) */
+@media screen and (max-width: 480px) {
+  .mag_heading h1 {
+    font-size: 40px;
+  }
+
+  .mag_heading p {
+    font-size: 14px;
+  }
+
+  .mag__img {
+    width: 200px;
+  }
+
+  .mag__button button {
+    padding: 8px;
+  }
+}

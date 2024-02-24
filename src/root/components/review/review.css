@@ -1,0 +1,103 @@
+#review {
+display: grid;
+  padding: 40px;
+}
+.review__page {
+  display: flex;
+}
+.review_card {
+  padding: 60px;
+  gap: 20px;
+}
+.cards {
+  display: flex;
+}
+.one {
+  max-width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 25px;
+  color: rgb(21, 89, 134);
+}
+.review__sub {
+  width: 100%;
+}
+.review__sub P {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.review__sub h1 {
+  font-size: 70px;
+  padding-bottom: 10px;
+  color: rgb(12, 59, 90);
+}
+.review__sub a {
+  font-size: large;
+  color: rgb(219, 98, 68);
+}
+#reviews {
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 2rem;
+  display: flex;
+  border-radius: 100px;
+  border-style: none;
+  align-items: center;
+  color: rgb(12, 59, 90);
+  gap: 5px;
+}
+.img__style {
+  align-items: center;
+  padding-top: 65px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.img__style img {
+  padding-left: 70px;
+  padding-right: 75px;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 1600px) {
+  .review_card {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    scroll-snap-type: x mandatory;
+  }
+
+  .one {
+    flex: 0 0 auto;
+    width: 300px; /* Set a fixed width for each review card */
+    scroll-snap-align: start;
+  }
+
+  .img__style {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .review__page {
+    display: block;
+  }
+
+  .review_card {
+    padding: 0;
+    gap: 5px;
+  }
+  .one {
+    max-width: 100%;
+    padding-left: 60px;
+    font-size: 20px;
+    color: rgb(21, 89, 134);
+  }
+  .img__style {
+    padding-top: 45px;
+  }
+}
