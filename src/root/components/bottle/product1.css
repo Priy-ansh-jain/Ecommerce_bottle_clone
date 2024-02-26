@@ -2,28 +2,35 @@
   padding-top: 100px;
   padding-bottom: 100px;
 }
+.image_cont {
+  width: 50%;
+  height: 100%;
+}
 
+.image_cont img {
+  width: 100%;
+  aspect-ratio: 3/3;
+}
+
+.buy_content {
+  width: 50%;
+  height: 100%;
+  color: #0c364d;
+}
 .buy-page_content {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   gap: 50px;
   padding-left: 200px;
   padding-right: 200px;
 }
-
-.image_cont {
-  flex: 1; /* Take up half of the container */
-}
-
-.buy_content {
-  flex: 1; /* Take up the other half of the container */
-  padding-left: 20px; /* Add padding for separation */
-}
-
 .buy_content h1 {
   font-size: 35px;
   color: rgb(20, 56, 70);
   padding-bottom: 5px;
+}
+.img1_one {
+  background-color: rgb(250, 248, 245);
 }
 .money_text {
   display: flex;
@@ -44,8 +51,8 @@
   font-size: 15px;
   background-size: cover;
 }
-#sp > span {
-  background-color: rgb(35, 101, 128);
+#spp > span {
+  background-color: rgb(94, 172, 202);
   border-radius: 10px;
   padding: 2px;
 }
@@ -78,6 +85,7 @@
   font-size: 17px;
   border-color: rgb(0, 0, 0);
   border-style: solid;
+  cursor: pointer;
 }
 .buy_page_butt button:nth-child(1) {
   margin-right: 2px;
@@ -86,12 +94,86 @@
 .buy_page_butt button:active {
   border-color: orange;
 }
+.buy_page_butt {
+  display: flex;
+  margin: 0;
+  gap: 5px;
+}
+
+.radio__in_button {
+  padding-bottom: 20px;
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  text-align: center;
+}
+
+.radio__in_button label,
+.radio__in_button input {
+  width: 100%;
+  height: 5vh;
+  color: rgb(14, 56, 68);
+  background-color: white;
+  font-weight: 800;
+  font-size: 17px;
+  border-color: rgb(177, 174, 174);
+  border-style: solid;
+  line-height: 4.5vh;
+}
+
+.radio__in_button input[type="radio"] {
+  opacity: 0.011;
+  position: absolute;
+}
+
+.radio__in_button input[type="radio"]:checked + .radio__in_buttonlabel {
+  width: 100%;
+  height: 5vh;
+  color: rgb(14, 56, 68);
+  background-color: white;
+  font-weight: 800;
+  font-size: 17px;
+  border-color: rgb(15, 55, 73);
+  border-style: solid;
+}
+
+.radio__in_button label {
+  cursor: pointer;
+  z-index: 90;
+}
+.img1_one.scaled {
+  transform: scale(1.1);
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+/* .buy_page_butt {
+    padding-top: 5px;
+  }
+  #oz17  {
+    width: 49.8%;
+    height: 5vh;
+    color: rgb(14, 56, 68);
+    background-color: white;
+    font-weight: 800;
+    font-size: 17px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+  }
+  .buy_page_butt button:nth-child(1) {
+    margin-right: 2px;
+  }
+  .buy_page_butt button:focus,
+  .buy_page_butt button:active {
+    border-color: orange;
+  } */
 .add-to__cart {
   padding-top: 30px;
 }
 .add-to__cart button {
+  cursor: pointer;
   width: 100%;
-  height: 5vh;
+  height: 6vh;
   color: white;
   background-color: rgb(14, 56, 68);
   font-size: 17px;
@@ -130,6 +212,7 @@
 .overlay_flight_traveldil:target {
   visibility: visible;
   opacity: 1;
+  z-index: 999;
 }
 .content_flightht_travel_dil h1 {
   padding-top: 25px;
@@ -282,20 +365,150 @@ hr {
   margin-left: -20px;
   color: #1b7092;
 }
+.bottle_color_change {
+  padding-top: 20px;
+  display: flex;
+}
 
-/* @media screen and (max-width: 910px) {
+/* //////////////////////////// */
+body {
+  font-family: sans-serif;
 
+  /* background-image: linear-gradient(
+          to bottom right,
+          #5dade2,
+          #7fb3d5,
+          #a2a3c3,
+          #c67d8f,
+          #f4d03f
+      ); */
+}
+fieldset {
+  /* margin: 50px;
+      padding: 20px; */
+  border-radius: 20px;
+  /* background-color: rgba(255, 255, 255, 0.1);
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+  display: inline-flex;
+  border: none;
+}
+
+legend {
+  font-size: 18px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: rgb(12, 43, 80);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.img-scale {
+  transform: scale(1.2);
+}
+@media screen and (max-width: 1420px) {
+  .buy_page_butt {
+    display: block;
+  }
+  .buy-page_content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  .radio__in_button {
+    padding-bottom: 20px;
+    width: 100%;
+    height: 9vh;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    text-align: center;
+  }
+
+  .radio__in_button label,
+  .radio__in_button input {
+    width: 100%;
+    height: 9vh;
+    color: rgb(14, 56, 68);
+    background-color: white;
+    font-weight: 800;
+    font-size: 17px;
+    border-color: rgb(177, 174, 174);
+    border-style: solid;
+    line-height: 4.5vh;
+  }
+
+  .radio__in_button input[type="radio"] {
+    opacity: 0.011;
+    position: absolute;
+  }
+
+  .radio__in_button input[type="radio"]:checked + .radio__in_button label {
+    width: 100%;
+    height: 9vh;
+    color: rgb(14, 56, 68);
+    background-color: white;
+    font-weight: 800;
+    font-size: 17px;
+    border-color: rgb(15, 55, 73);
+    border-style: solid;
+  }
+}
+@media screen and (max-width: 1180px) {
+  .buy-page_content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .buy_page_butt {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .buy-page_content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media screen and (max-width: 910px) {
   .buy-page_content {
     display: block;
-    align-items: center;
+    justify-content: space-between;
     padding-left: 50px;
     padding-right: 50px;
   }
   .image_cont {
     width: 100%;
-  height: 100vh;
+    height: 100%;
   }
-  .buy_content{
+  .buy_content {
     width: 100%;
   }
-} */
+  .buy_page_butt {
+    display: flex;
+  }
+}
+@media screen and (max-width: 360px) {
+  .buy-page_content {
+    display: block;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .image_cont {
+    width: 100%;
+    height: 100%;
+  }
+  .buy_content {
+    width: 100%;
+  }
+}

@@ -85,8 +85,8 @@ const Product4 = () => {
               {currentProduct.sellingPrice}
             </p>
             <p id="spp">
-              {" "}
-              <span>{currentProduct.save}</span>
+              {/* {" "}
+              <span>{currentProduct.save}</span> */}
             </p>
           </div>
           <div className="money__star">
@@ -131,7 +131,7 @@ const Product4 = () => {
               <div className="radio__two">
                 <input
                   style={{
-                    backgroundColor: "ffffff;",
+                    backgroundColor: "ffffff",
                     borderWidth: "rgb(156, 196, 206)",
                     borderColor: "#f0f0f0",
                   }}
@@ -147,7 +147,7 @@ const Product4 = () => {
             </fieldset>
           </div>
           {/* ///////////// */}
-<Dropdown/>
+          <Dropdown />
           {/* ///////////// */}
           <div className="buy_page_butt">
             <div className="radio__in_button4">

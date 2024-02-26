@@ -3,19 +3,22 @@
   padding-bottom: 100px;
 }
 .image_cont3 {
-  width: 60%;
-  height: 100vh;
+  width: 50%;
+  height: 100%;
 }
+
 .image_cont3 img {
   width: 100%;
+  aspect-ratio: 3/3;
 }
+
 .buy_content3 {
-  height: 100vh;
-  width: 40%;
+  width: 50%;
+  height: 100%;
 }
 .buy-page_content3 {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   gap: 50px;
   padding-left: 200px;
   padding-right: 200px;
@@ -407,6 +410,7 @@ input[type="radio"] {
   margin-right: 5px;
   background-color: transparent;
   position: relative;
+  cursor: pointer;
 }
 
 input[type="radio"]:checked::before {
@@ -607,7 +611,7 @@ input[type="radio"]:checked::before {
 @media screen and (max-width: 1180px) {
   .buy-page_content3 {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
     gap: 50px;
     padding-left: 50px;
     padding-right: 50px;
@@ -620,7 +624,7 @@ input[type="radio"]:checked::before {
 @media screen and (max-width: 980px) {
   .buy-page_content3 {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
     gap: 50px;
     padding-left: 50px;
     padding-right: 50px;
@@ -629,7 +633,7 @@ input[type="radio"]:checked::before {
 @media screen and (max-width: 910px) {
   .buy-page_content3 {
     display: block;
-    align-items: center;
+    justify-content: space-between;
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -647,7 +651,7 @@ input[type="radio"]:checked::before {
 @media screen and (max-width: 360px) {
   .buy-page_content3 {
     display: block;
-    align-items: center;
+    justify-content: space-between;
     padding-left: 30px;
     padding-right: 30px;
   }

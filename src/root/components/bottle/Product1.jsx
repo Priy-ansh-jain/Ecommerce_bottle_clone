@@ -411,7 +411,11 @@ const Product1 = () => {
           </div>
           <hr />
           <div className="hydro">
-            <p>{currentProduct.description}</p>
+            <p>
+              Be a hydro homie and gift these to your friends (or keep them to
+              yourself). LARQ Bottle Swig Top is perfect for large capacity
+              drinking on the go. Its wide-mouth design is an ice-lover's dream.
+            </p>
           </div>
           <hr />
           <div className="select_butt">

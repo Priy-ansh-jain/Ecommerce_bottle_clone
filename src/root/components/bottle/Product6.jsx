@@ -14,22 +14,36 @@ import { useCart } from "../context/Context";
 import { productData6 } from "../data/Data";
 import { subProductData6 } from "../data/Data";
 import Dropdown from "./dropdown/Dropdown";
-import {replaceProductData6} from "../data/Data"
+import { replaceProductData6 } from "../data/Data"
+import { subSecondProductData6 } from "../data/Data";
 
 const Product6 = () => {
   const { addToCart } = useCart();
   const [currentProduct, setCurrentProduct] = useState(productData6[0]);
   const [selectedSize, setSelectedSize] = useState(0); // Store selected size separately
-
+  const [subCurrentProduct, setSubCurrentProduct] = useState(
+    subProductData6[0]
+  );
 
   const handleButtonClick9 = (x) => {
-    const selectedProduct = productData6[x];
-    setCurrentProduct((prevProduct) => ({
-      ...prevProduct,
-      textName: selectedProduct.textName,
-      image: selectedProduct.image,
-      heading: selectedProduct.heading,
-    }));
+    if (insulationType === 0) {
+      const selectedProduct = productData6[x];
+      setCurrentProduct((prevProduct) => ({
+        ...prevProduct,
+        textName: selectedProduct.textName,
+        image: selectedProduct.image,
+        heading: selectedProduct.heading,
+      }));
+    } else {
+      const selectedProduct = replaceProductData6[x];
+      setCurrentProduct((prevProduct) => ({
+        ...prevProduct,
+        textName: selectedProduct.textName,
+        image: selectedProduct.image,
+        heading: selectedProduct.heading,
+      }));
+    }
+
   };
 
   const handleSubProductClick = (x) => {
@@ -41,7 +55,7 @@ const Product6 = () => {
       toCart: subSelectedProduct.toCart,
       textPrice: subSelectedProduct.textPrice,
       save: subSelectedProduct.save,
-      title: subSelectedProduct.title,
+      title: subCurrentProduct.title,
     };
     setCurrentProduct(updatedProduct);
     // Apply image scale for 25oz
@@ -56,9 +70,16 @@ const Product6 = () => {
 
   const handleInsulateClick = (type) => {
     setInsulationType(type);
+    if (type === 0) {
+      // If insulation type is 0 (not insulated), set subCurrentProduct to subSecondProductData3
+      setSubCurrentProduct(subSecondProductData6[selectedSize]);
+    } else {
+      // If insulation type is not 0, set subCurrentProduct to subProductData3
+      setSubCurrentProduct(subProductData6[selectedSize]);
+    }
   };
 
-//   const handleInsulatedButtonClick = (x) => {};
+  //   const handleInsulatedButtonClick = (x) => {};
 
   const handleAddToCartClick = () => {
     addToCart(currentProduct);
@@ -105,7 +126,7 @@ const Product6 = () => {
             </a>
             <p>6636 reviews</p>
           </div>
-{/* Insulated /////////////////////////// */}
+          {/* Insulated /////////////////////////// */}
           <div className="Insulated_bottle6">
             <input
               onClick={() => {
@@ -188,136 +209,170 @@ const Product6 = () => {
           </div>
 
 
-{/* Insulated/////////////////////////////// */}
+          {/* Insulated/////////////////////////////// */}
           <p id="size">size</p>
-          <div className="buy_page_butt">
-            <div className="radio__in_button6">
-              <input
-                onClick={() => {
-                  handleSubProductClick(0);
-                }}
-                type="radio"
-                id="a17"
-                name="check-substitution-2"
-              />
-              <label
-                className="btn btn-default radio__in_buttonlabel"
-                htmlFor="a17"
-              >
-                17 Oz
-              </label>
-            </div>
-            <div className="radio__in_button6">
-              <input
-                onClick={() => {
-                  handleSubProductClick(1);
-                }}
-                type="radio"
-                id="a25"
-                name="check-substitution-2"
-              />
-              <label
-                className="btn btn-default radio__in_buttonlabel"
-                htmlFor="a25"
-              >
-                25 Oz
-              </label>
-            </div>
-          </div>
+          {insulationType === 0 ? (
+            <>
+              <div className="buy_page_butt">
+                <div className="radio__in_button6">
+                  <input
+                    onClick={() => {
+                      handleSubProductClick(0);
+                    }}
+                    type="radio"
+                    id="a17"
+                    name="check-substitution-2"
+                  />
+                  <label
+                    className="btn btn-default radio__in_buttonlabel"
+                    htmlFor="a17"
+                  >
+                    17 Oz
+                  </label>
+                </div>
+                <div className="radio__in_button6">
+                  <input
+                    onClick={() => {
+                      handleSubProductClick(1);
+                    }}
+                    type="radio"
+                    id="a25"
+                    name="check-substitution-2"
+                  />
+                  <label
+                    className="btn btn-default radio__in_buttonlabel"
+                    htmlFor="a25"
+                  >
+                    25 Oz
+                  </label>
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="buy_page_butt">
+                <div className="radio__in_button6">
+                  <input
+                    onClick={() => {
+                      handleSubProductClick(0);
+                    }}
+                    type="radio"
+                    id="a17"
+                    name="check-substitution-2"
+                  />
+                  <label
+                    className="btn btn-default radio__in_buttonlabel"
+                    htmlFor="a17"
+                  >
+                    24 Oz
+                  </label>
+                </div>
+                <div className="radio__in_button6">
+                  <input
+                    onClick={() => {
+                      handleSubProductClick(1);
+                    }}
+                    type="radio"
+                    id="a25"
+                    name="check-substitution-2"
+                  />
+                  <label
+                    className="btn btn-default radio__in_buttonlabel"
+                    htmlFor="a25"
+                  >
+                    32 Oz
+                  </label>
+                </div>
+              </div>
+            </>
+          )}
+
           <div className="bottle_color_change6">
             <fieldset>
               <legend>{currentProduct.textName}</legend>
 
-              {insulationType === 0 && (
-                <div>
-                  {/* Render the first set of inputs */}
+              {insulationType === 0 ? (
+                <>
 
-                  <div className="bottle_color_change">
-                    <div className="raddio__one">
-                      <input
-                        style={{
-                          backgroundColor: "#0c0c0c",
-                          borderWidth: "rgb(156, 196, 206)",
-                          borderColor: "#D1D1D0",
-                        }}
-                        onClick={() => {
-                          handleButtonClick9(0);
-                        }}
-                        type="radio"
-                        id="bottt1"
-                        name="flavor"
-                        value="vanilla"
-                      />
-                    </div>
 
-                    <div className="raddio__two">
-                      <input
-                        style={{
-                          backgroundColor: "#F6EDDE",
-                          borderWidth: "rgb(156, 196, 206)",
-                          borderColor: "#e6e6e6",
-                        }}
-                        onClick={() => {
-                          handleButtonClick9(1);
-                        }}
-                        type="radio"
-                        id="bottt2"
-                        name="flavor"
-                        value="chocolate"
-                      />
-                    </div>
+                  <div className="raddio__one">
+                    <input
+                      style={{
+                        backgroundColor: "#0c0c0c",
+                        borderWidth: "rgb(156, 196, 206)",
+                        borderColor: "#D1D1D0",
+                      }}
+                      onClick={() => {
+                        handleButtonClick9(0);
+                      }}
+                      type="radio"
+                      id="bottt1"
+                      name="flavor"
+                      value="vanilla"
+                    />
                   </div>
-                </div>
-              )}
 
-              {insulationType === 1 && (
-                <div>
-                  {/* Render the first set of inputs */}
-
-                  <div className="bottle_color_change">
-                    <div className="raddio__one">
-                      <input
-                        style={{
-                          backgroundColor: "#9B5633",
-                          borderWidth: "rgb(156, 196, 206)",
-                          borderColor: "#D1D1D0",
-                        }}
-                        onClick={() => {
-                          handleButtonClick9(0);
-                        }}
-                        type="radio"
-                        id="bottt1"
-                        name="flavor"
-                        value="vanilla"
-                      />
-                    </div>
-                    <div className="raddio__two">
-                      <input
-                        style={{
-                          backgroundColor: "#361D14",
-                          borderWidth: "rgb(156, 196, 206)",
-                          borderColor: "#e6e6e6",
-                        }}
-                        onClick={() => {
-                          handleButtonClick9(1);
-                        }}
-                        type="radio"
-                        id="bottt2"
-                        name="flavor"
-                        value="chocolate"
-                      />
-                    </div>
+                  <div className="raddio__two">
+                    <input
+                      style={{
+                        backgroundColor: "#F6EDDE",
+                        borderWidth: "rgb(156, 196, 206)",
+                        borderColor: "#e6e6e6",
+                      }}
+                      onClick={() => {
+                        handleButtonClick9(1);
+                      }}
+                      type="radio"
+                      id="bottt2"
+                      name="flavor"
+                      value="chocolate"
+                    />
                   </div>
-                </div>
+                </>
+              ) : (
+                <>
+                  <div className="raddioo__one">
+                    <input
+                      // style={{
+                      //   backgroundColor: "#9B5633",
+                      //   borderWidth: "rgb(156, 196, 206)",
+                      //   borderColor: "#D1D1D0",
+                      // }}
+                      onClick={() => {
+                        handleButtonClick9(0);
+                      }}
+                      type="radio"
+                      id="bottt1"
+                      name="flavor"
+                      value="vanilla"
+                    />
+                  </div>
+                  <div className="raddioo__two">
+                    <input
+                      // style={{
+                      //   backgroundColor: "#361D14",
+                      //   borderWidth: "rgb(156, 196, 206)",
+                      //   borderColor: "#e6e6e6",
+                      // }}
+                      onClick={() => {
+                        handleButtonClick9(1);
+                      }}
+                      type="radio"
+                      id="bottt2"
+                      name="flavor"
+                      value="chocolate"
+                    />
+                  </div>
+                </>
               )}
             </fieldset>
           </div>
 
           <div className="sixth__bottle">
             <div className="sixth__container">
-            <p>Replacment filter plan</p>
+              <p>Replacment filter plan</p>
               <a href="">Do i need a plan?</a>
-             
+
             </div>
             <div>
               <Dropdown />

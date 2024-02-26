@@ -22,7 +22,9 @@ import Product6 from "./root/components/bottle/Product6";
 import Product4 from "./root/components/bottle/Product4";
 import Product5 from "./root/components/bottle/Product5";
 import Product7 from "./root/components/bottle/Product7";
-import Trending2 from "./root/components/shopall/Trending2";
+import CheckOut from "./root/components/checkout/CheckOut";
+
+// import Trending2 from "./root/components/shopall/Trending2";
 // import Cart from "./root/components/cart/Cart";
 
 const App = () => {
@@ -54,6 +56,7 @@ const App = () => {
                 <Header />
 
                 <SigninForm />
+
                 <Footer />
               </>
             }
@@ -66,6 +69,17 @@ const App = () => {
 
                 <SignupForm />
                 <Footer />
+              </>
+            }
+          />
+        </Route>
+        <Route>
+          <Route
+            path="/checkout"
+            element={ 
+              <> 
+                <Header />
+                <CheckOut />
               </>
             }
           />
@@ -154,7 +168,7 @@ const App = () => {
               <Header />
 
               <ShopAll />
-              <Trending2 />
+
               <Footer />
             </>
           }

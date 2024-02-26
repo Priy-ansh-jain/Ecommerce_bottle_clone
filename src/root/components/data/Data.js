@@ -6,7 +6,7 @@ export const productData1 = [
       "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1702483496/SET-3XSWIG-M_405524819/SET-3XSWIG-M_405524819.png?_i=AA",
     costPrice: "$119.85",
     sellingPrice: "99.00",
-    save: " save $20.85",
+    save: "20.85",
     saving: "20.85",
     toCart: "Add to cart-$99.00",
     textPrice: "$24.75",
@@ -19,7 +19,7 @@ export const productData1 = [
       "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1702483490/SET-3XSWIG-L_4056c9d82/SET-3XSWIG-L_4056c9d82.png?_i=AA",
     costPrice: "$149.85",
     sellingPrice: "119.00",
-    save: "save $30.85",
+    save: "30.85",
     saving: "20.85",
     toCart: "Add to cart $119.00",
     textPrice: "$29.75",
@@ -37,7 +37,7 @@ export const productData2 = [
     heading: "Pure Vibes",
     costPrice: "$129.85",
     sellingPrice: "109.00",
-    save: "save $20.85",
+    save: "20.85",
     toCart: "Add to cart-$109.00",
     textPrice: "$27.75",
   },
@@ -48,7 +48,7 @@ export const productData2 = [
     textName: "Seaside Mint",
     costPrice: "$129.85",
     sellingPrice: "109.00",
-    save: "save $20.85",
+    save: "20.85",
     toCart: "Add to cart-$109.00",
     textPrice: "$27.75",
     heading: "Pure Vibes",
@@ -60,7 +60,7 @@ export const productData2 = [
     textName: "Granite White",
     costPrice: "$129.85",
     sellingPrice: "109.00",
-    save: "save $20.85",
+    save: "20.85",
     toCart: "Add to cart-$109.00",
     textPrice: "$27.75",
     heading: "Pure Vibes",
@@ -72,9 +72,9 @@ export const subProductData2 = [
     id: 1,
     textName: "Obsidian Black",
     sellingPrice: "109.00",
-    save: "save $20.85",
-    costPrice: "$129.85",
-    textPrice: "$27.75",
+    save: "20.85",
+    costPrice: "129.85",
+    textPrice: "27.75",
     toCart: "Add to cart-$109.00",
     title: "25 Oz",
   },
@@ -82,8 +82,8 @@ export const subProductData2 = [
     id: 2,
     textName: "Obsidian Black",
     sellingPrice: "115.00",
-    save: "save $24.85",
-    costPrice: "$139.00",
+    save: "24.85",
+    costPrice: "139.00",
     toCart: "Add to cart-$119.00",
     textPrice: "$28.75",
     title: "17 Oz",
@@ -157,7 +157,8 @@ export const subProductData3 = [
     sellingPrice: "99.00",
     textPrice: "$29.70",
     toCart: "Add to cart-$99.00",
-    title: "25 Oz",
+    title: "17 Oz",
+    insulated: "Insulated",
   },
   {
     id: 2,
@@ -165,33 +166,77 @@ export const subProductData3 = [
     sellingPrice: "118.00",
     toCart: "Add to cart-$118.00",
     textPrice: "$29.00",
-    title: "17 Oz",
+    title: "25 Oz",
+    insulated: "Insulated",
+  },
+];
+
+export const subSecondProductData3 = [
+  {
+    id: 1,
+    textName: "Obsidian Black",
+    sellingPrice: "89.00",
+    textPrice: "$22.25",
+    toCart: "Add to cart-$89.00",
+    title: "24 Oz",
+    save: "0",
+    insulated: "NotInsulated",
+  },
+  {
+    id: 2,
+    textName: "Obsidian Black",
+    sellingPrice: "98.00",
+    toCart: "Add to cart-$98.00",
+    textPrice: "$24.50",
+    title: "32 Oz",
+    save: "0",
+    insulated: "NotInsulated",
   },
 ];
 
 export const replaceProductData3 = [
   {
     id: 1,
+    textName: "Black / Onyx",
+    heading: "LARQ Bottle Movement PureVis™",
+    sellingPrice: "89.00",
+    toCart: "Add to cart-$89.00",
     image:
-      "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1638225363/p2-bo-24-2-white-q/p2-bo-24-2-white-q.jpg?_i=AA",
+      "https://res.cloudinary.com/larq/images/w_2460,h_2560/f_auto,q_auto/v1666085116/LARQ-Bottle-Filtered_MSW_BO_01A/LARQ-Bottle-Filtered_MSW_BO_01A.jpg?_i=AA",
   },
   {
     id: 2,
+    textName: "White / Dune",
+    heading: "LARQ Bottle Movement PureVis™",
+    sellingPrice: "89.00",
+    toCart: "Add to cart-$89.00",
     image:
       "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1638225431/p2-wd-24-2-white-q_30815ebeb/p2-wd-24-2-white-q_30815ebeb.jpg?_i=AA",
   },
   {
     id: 3,
+    textName: "White / Pebble",
+    heading: "LARQ Bottle Movement PureVis™",
+    sellingPrice: "89.00",
+    toCart: "Add to cart-$89.00",
     image:
       "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1638225360/p2-wp-24-2-white-q/p2-wp-24-2-white-q.jpg?_i=AA",
   },
   {
     id: 4,
+    textName: "Black / Pine",
+    heading: "LARQ Bottle Movement PureVis™",
+    sellingPrice: "89.00",
+    toCart: "Add to cart-$89.00",
     image:
       "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1638225361/p2-bp-24-2-white-q/p2-bp-24-2-white-q.jpg?_i=AA",
   },
   {
     id: 5,
+    toCart: "Add to cart-$89.00",
+    textName: "White / Coral",
+    heading: "LARQ Bottle Movement PureVis™",
+    sellingPrice: "89.00",
     image:
       "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1638225363/p2-wc-24-2-white-q/p2-wc-24-2-white-q.jpg?_i=AA",
   },
@@ -310,14 +355,11 @@ export const subProductData5 = [
   },
 ];
 
-
-
-
 export const productData6 = [
   {
     id: 1,
     image:
-    "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1668516896/2_34434f6d4/2_34434f6d4.png?_i=AA",
+      "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1668516896/2_34434f6d4/2_34434f6d4.png?_i=AA",
     textName: "Obsidian Black",
     heading: "LARQ Bottle Movement Filtered",
     sellingPrice: "49.95",
@@ -329,7 +371,7 @@ export const productData6 = [
   {
     id: 2,
     image:
-    "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1668516889/1_3444bed76/1_3444bed76.png?_i=AA",
+      "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1668516889/1_3444bed76/1_3444bed76.png?_i=AA",
     textName: "Granite White",
     heading: "LARQ Bottle Movement Filtered",
     costPrice: "58.00",
@@ -338,7 +380,6 @@ export const productData6 = [
     toCart: "Add to cart-$99.00",
     textPrice: "$24.75",
   },
-
 ];
 
 export const subProductData6 = [
@@ -365,18 +406,44 @@ export const subProductData6 = [
 export const replaceProductData6 = [
   {
     id: 1,
+    textName: "Black / Onyx",
+    heading: "LARQ Bottle Movement Filtered",
+    sellingPrice: "45.00",
+    costPrice: "55.00",
+    toCart: "Add to cart -$45.00",
+
     image:
-    "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/w_2460,h_2560/f_auto,q_auto/v1666085099/LARQ-Bottle-Filtered_MSW_WP_01A/LARQ-Bottle-Filtered_MSW_WP_01A.jpg?_i=AA",
+      "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/w_2460,h_2560/f_auto,q_auto/v1666085116/LARQ-Bottle-Filtered_MSW_BO_01A/LARQ-Bottle-Filtered_MSW_BO_01A.jpg?_i=AA",
   },
   {
     id: 2,
+    textName: "White / Pebble",
+    heading: "LARQ Bottle Movement Filtered",
+    sellingPrice: "45.00",
+    costPrice: "55.00",
+    toCart: "Add to cart -$45.00",
     image:
       "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/w_2460,h_2560/f_auto,q_auto/v1666085099/LARQ-Bottle-Filtered_MSW_WP_01A/LARQ-Bottle-Filtered_MSW_WP_01A.jpg?_i=AA",
   },
-
 ];
-
-
+export const subSecondProductData6 = [
+  {
+    id: 1,
+    textName: "Obsidian Black",
+    sellingPrice: "118.00",
+    textPrice: "$22.25",
+    toCart: "Add to cart-$89.00",
+    title: "24 Oz",
+  },
+  {
+    id: 2,
+    textName: "Obsidian Black",
+    sellingPrice: "118.00",
+    toCart: "Add to cart-$98.00",
+    textPrice: "$24.50",
+    title: "32 Oz",
+  },
+];
 
 export const productData7 = [
   {
@@ -416,9 +483,6 @@ export const productData7 = [
     heading: "LARQ Bottle Swig Top",
   },
 ];
-
-
-
 
 export const subProductData7 = [
   {

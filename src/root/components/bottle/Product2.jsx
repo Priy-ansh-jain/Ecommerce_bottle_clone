@@ -42,12 +42,17 @@ const Product2 = () => {
     };
     setCurrentProduct(updatedProduct);
     // Apply image scale for 25oz
+    // Apply image scale for 25oz
     if (x === 1) {
+      setImageScale(1.05)
       setSelectedSize(1); // Update selected size only when a new size is selected
     } else {
+      setImageScale(1);
       setSelectedSize(0);
     }
   };
+
+  const [imageScale, setImageScale] = useState(1);
 
   const handleAddToCartClick = () => {
     addToCart(currentProduct);
@@ -61,6 +66,7 @@ const Product2 = () => {
             <img
               src={currentProduct.image}
               alt={`image ${currentProduct.image}`}
+              style={{ transform: `scale(${imageScale})` }}
             />
           </div>
         </div>
@@ -92,7 +98,7 @@ const Product2 = () => {
             <p>6636 reviews</p>
           </div>
 
-         
+
 
           <p id="size">size</p>
           <div className="buy_page_butt">
@@ -134,7 +140,7 @@ const Product2 = () => {
               <legend>{currentProduct.textName}</legend>
 
               <div className="radio1">
-              <input style={{backgroundColor: "#0c0c0c" ,borderWidth: "rgb(156, 196, 206)", borderColor:"#e6e6e6"} }
+                <input style={{ backgroundColor: "#0c0c0c", borderWidth: "rgb(156, 196, 206)", borderColor: "#e6e6e6" }}
                   onClick={() => {
                     handleButtonClick9(0);
                   }}
@@ -146,7 +152,7 @@ const Product2 = () => {
               </div>
 
               <div className="radio2">
-              <input style={{backgroundColor: "rgb(156, 196, 206)" ,borderWidth: "rgb(156, 196, 206)", borderColor:"#e6e6e6"} }
+                <input style={{ backgroundColor: "rgb(156, 196, 206)", borderWidth: "rgb(156, 196, 206)", borderColor: "#e6e6e6" }}
                   onClick={() => {
                     handleButtonClick9(1);
                   }}
@@ -158,7 +164,7 @@ const Product2 = () => {
               </div>
 
               <div className="radio3">
-              <input style={{backgroundColor: "rgb(253, 250, 236)" ,borderWidth: "rgb(156, 196, 206)", borderColor:"#e6e6e6"} }
+                <input style={{ backgroundColor: "rgb(253, 250, 236)", borderWidth: "rgb(156, 196, 206)", borderColor: "#e6e6e6" }}
                   onClick={() => {
                     handleButtonClick9(2);
                   }}

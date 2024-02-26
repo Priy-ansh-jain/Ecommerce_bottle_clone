@@ -1,17 +1,20 @@
 #review {
-display: grid;
+  display: grid;
   padding: 40px;
 }
+
 .review__page {
   display: flex;
 }
+
 .review_card {
-  padding: 60px;
-  gap: 20px;
+  padding-top: 60px;
 }
+
 .cards {
   display: flex;
 }
+
 .one {
   max-width: 100%;
   padding-left: 30px;
@@ -19,22 +22,27 @@ display: grid;
   font-size: 25px;
   color: rgb(21, 89, 134);
 }
+
 .review__sub {
   width: 100%;
 }
-.review__sub P {
+
+.review__sub p {
   padding-top: 20px;
   padding-bottom: 30px;
 }
+
 .review__sub h1 {
   font-size: 70px;
   padding-bottom: 10px;
   color: rgb(12, 59, 90);
 }
+
 .review__sub a {
   font-size: large;
   color: rgb(219, 98, 68);
 }
+
 #reviews {
   padding-left: 1rem;
   padding-top: 1rem;
@@ -47,16 +55,47 @@ display: grid;
   color: rgb(12, 59, 90);
   gap: 5px;
 }
+
+.img__style img {
+  object-fit: contain;
+  width: 110px;
+}
 .img__style {
+  width: 1060px;
   align-items: center;
   padding-top: 65px;
   display: grid;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.img__style img {
-  padding-left: 70px;
-  padding-right: 75px;
-  object-fit: contain;
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+  height: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; /* Set the background color of the scrollbar track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(12, 59, 90, 0.5); /* Set the color of the scrollbar handle */
+  border-radius: 10px; /* Round the corners of the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(
+    12,
+    59,
+    90,
+    0.7
+  ); /* Set the color of the scrollbar handle on hover */
 }
 
 @media screen and (max-width: 1600px) {
@@ -78,6 +117,7 @@ display: grid;
   }
 
   .img__style {
+    margin-bottom: 20px;
     display: flex;
   }
 }
@@ -99,5 +139,11 @@ display: grid;
   }
   .img__style {
     padding-top: 45px;
+    padding-bottom: 15px;
+    width: 1150px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .img__style img {
   }
 }

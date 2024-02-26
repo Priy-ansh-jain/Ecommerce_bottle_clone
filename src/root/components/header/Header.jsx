@@ -101,7 +101,7 @@ const Header = () => {
   };
   const { clearCartData } = useCart();
   const handleLogout = async () => {
-    
+
     try {
       await account.deleteSession("current"); // Delete the current session
       setAuthenticated(false); // Update authentication status
@@ -199,7 +199,7 @@ const Header = () => {
                               filter or purity water on the go
                             </div>
                           </div>
-                          <div>
+                          <div className="inner__home-img">
                             {" "}
                             <img
                               src={
@@ -628,33 +628,36 @@ const Header = () => {
             </div>
             <div className="third">
               <div className="three">
-              <ul>
-                <li>
-                  <a href="">TECHNOLOGY</a>
-                </li>
-                <li>
-                  <a href="">FAQ</a>
-                </li>
-              </ul>
+                <ul>
+                  <li>
+                    <a href="">TECHNOLOGY</a>
+                  </li>
+                  <li>
+                    <a href="">FAQ</a>
+                  </li>
+                </ul>
               </div>
 
               {authenticated ? ( // If authenticated, show logout button
-               
-               <div className="log__butt"><button onClick={handleLogout}>Logout</button></div>
+
+                <div className="log__butt"><button onClick={handleLogout}>Logout</button></div>
               ) : (
-                <li>
-                  <Link to="/signin">
-                    <FaUser
-                      style={{ color: "grey", fontSize: "23px" }}
-                      className="faUser"
-                    />
-                  </Link>
-                </li>
+                <div className="fa__icon-user">
+                  <li>
+                    <Link to="/signin">
+                      <FaUser
+
+                        className="faUser"
+                      />
+                    </Link>
+                  </li>
+                </div>
               )}
-              <div>
-                <span onClick={toggleCart} className="carrrtt">
-                  <CartIcon cartCount={cartCount} />
-                </span>
+              <div className="cart-icon-wrapper" onClick={toggleCart}>
+                <CartIcon cartCount={cartCount} />
+                {cartCount > 0 && (
+                  <span className="cart-count">{cartCount}</span>
+                )}
               </div>
 
               <div className={`cart-slider ${isCartOpen ? "open" : ""}`}>
@@ -765,7 +768,7 @@ const Header = () => {
             <div className="login__text">
               {" "}
               <Link to="/signin">
-                <a href="">Login</a>
+                <p>Login</p>
               </Link>
             </div>
           </div>

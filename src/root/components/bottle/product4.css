@@ -389,6 +389,7 @@ input[type="radio"] {
   background-color: transparent;
   position: relative;
   top: 6px;
+  cursor: pointer;
 }
 
 input[type="radio"]:checked::before {
@@ -488,60 +489,70 @@ input[type="radio"]:checked::before {
 .img-scale {
   transform: scale(1.2);
 }
+@media screen and (max-width: 1560px) {
+  .inner__button {
+    display: flex;
+    height: 50px;
+  }
+  .te {
+    padding-top: 7px;
+    line-height: 20px;
+  }
+}
 @media screen and (max-width: 1420px) {
-    .buy_page_butt {
-        display: block;
-      }
-      .buy-page_content4 {
-        display: flex;
-        align-items: center;
-        gap: 50px;
-        padding-left: 150px;
-        padding-right: 150px;
-      }
-      .new__add {
-        display: flex;
-        justify-content: space-between;
-        max-width: 20%;
-      }
-      .radio__in_button4 {
-        padding-bottom: 20px;
-        width: 100%;
-        height: 9vh;
-        display: flex;
-        justify-content: center;
-        align-items: left;
-        text-align: center;
-      }
-      
-      .radio__in_button4 label,
-      .radio__in_button4 input {
-        width: 100%;
-        height: 9vh;
-        color: rgb(14, 56, 68);
-        background-color: white;
-        font-weight: 800;
-        font-size: 17px;
-        border-color: rgb(177, 174, 174);
-        border-style: solid;
-        line-height: 4.5vh;
-      }
-      
-      .radio__in_button4 input[type="radio"] {
-        opacity: 0.011;
-        position: absolute;
-      }
-      
-      .radio__in_button4 input[type="radio"]:checked + .radio__in_buttonlabel {
-        width: 100%;
-        height: 9vh;
-        color: rgb(14, 56, 68);
-        background-color: white;
-        font-weight: 800;
-        font-size: 17px;
-        border-color: rgb(15, 55, 73);
-        border-style: solid;
-      }
+  .buy_page_butt {
+    display: block;
+  }
+  .buy-page_content4 {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  .new__add {
+    display: flex;
+    justify-content: space-between;
+    max-width: 20%;
+  }
+  .radio__in_button4 {
+    padding-bottom: 20px;
+    width: 100%;
+    height: 9vh;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    text-align: center;
+  }
+
+  .radio__in_button4 label,
+  .radio__in_button4 input {
+    width: 100%;
+    height: 9vh;
+    color: rgb(14, 56, 68);
+    background-color: white;
+    font-weight: 800;
+    font-size: 17px;
+    border-color: rgb(177, 174, 174);
+    border-style: solid;
+    line-height: 4.5vh;
+  }
+
+  .radio__in_button4 input[type="radio"] {
+    opacity: 0.011;
+    position: absolute;
+  }
+
+  .radio__in_button4 input[type="radio"]:checked + .radio__in_buttonlabel {
+    width: 100%;
+    height: 9vh;
+    color: rgb(14, 56, 68);
+    background-color: white;
+    font-weight: 800;
+    font-size: 17px;
+    border-color: rgb(15, 55, 73);
+    border-style: solid;
+  }
 }
 @media screen and (max-width: 1180px) {
   .buy-page_content4 {
@@ -554,8 +565,8 @@ input[type="radio"]:checked::before {
   .buy_page_butt {
     display: block;
   }
-  .new__add{
-    max-width: 20%;
+  .new__add {
+    max-width: 13%;
   }
 }
 
@@ -601,6 +612,3 @@ input[type="radio"]:checked::before {
     width: 100%;
   }
 }
-
-
-

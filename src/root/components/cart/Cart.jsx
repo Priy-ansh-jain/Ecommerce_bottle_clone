@@ -29,7 +29,19 @@ const Cart = () => {
       }
     }, 0);
   };
+  const calculateTotalSavings = () => {
+    return cart.reduce((totalSavings, item) => {
+      const saving = parseFloat(item.save);
+      const quantity = parseInt(item.quantity, 10); // Get the quantity of the item
 
+      if (!isNaN(saving) && !isNaN(quantity)) {
+        return totalSavings + saving * quantity; // Multiply saving by quantity
+      } else {
+        console.error(`Invalid save amount or quantity for item: ${JSON.stringify(item)}`);
+        return totalSavings;
+      }
+    }, 0);
+  };
   return (
     <div className="cart">
       {cart.length === 0 ? (
@@ -246,7 +258,7 @@ const Cart = () => {
           </div>
         </div>
       ) : (
-        <div className="Cart__page">
+        <div className="cart__page">
           <ul className="cart_ul">
             {cart.map((item, index) => (
               <li key={index}>
@@ -256,9 +268,9 @@ const Cart = () => {
                   </div>
                   <div className="Bottle__cart-name">
                     <div className="bottle_cart_heading">{item.heading}</div>
-                    <div className="Oz_size">{item.title}
+                    <div className="Oz_size">{item.Insulated}{item.textName} {item.title}
                     </div>
-                    <div className="cart_item_quantity">
+                    <div className="cart_checkout_quantity">
                       <div className="minus">
                         <a onClick={() => decreaseQuantity(index)}>
                           <FaMinus style={{ color: "grey", fontSize: "10px" }} />
@@ -270,7 +282,7 @@ const Cart = () => {
                       </div>
                       <div className="minus">
                         <a onClick={() => increaseQuantity(index)}>
-                          <FaPlus style={{fontSize: "10px"}} />
+                          <FaPlus style={{ fontSize: "10px" }} />
                         </a>
                       </div>
                     </div>
@@ -294,24 +306,24 @@ const Cart = () => {
                 <hr />
                 <div className="cart__price-save">
                   <span>You are saving</span>
-                  <b>{item.save}</b>
+                  <b>${item.save}</b>
                 </div>
                 <hr />
               </li>
             ))}
           </ul>
 
-          <div>
+          <div className="total">
             <div className="For__total">
               <span>Sub Total</span>
               <b> ${calculateTotalPrice().toFixed(2)}</b>
             </div>
+            <div className="For__savings">
+              <span>Total Savings</span>
+              <b> ${calculateTotalSavings().toFixed(2)}</b>
+            </div>
           </div>
-          <div className="Check_out-Button">
-            <Link to="checkout">
-              <button>Checkout</button>
-            </Link>
-          </div>
+
         </div>
       )}
     </div>

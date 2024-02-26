@@ -14,34 +14,46 @@ import { useCart } from "../context/Context";
 import { productData3 } from "../data/Data";
 import { subProductData3 } from "../data/Data";
 import { replaceProductData3 } from "../data/Data";
+import { subSecondProductData3 } from "../data/Data";
 
 const Product3 = () => {
   const { addToCart } = useCart();
   const [currentProduct, setCurrentProduct] = useState(productData3[0]);
+  const [selectedSize, setSelectedSize] = useState(0); // Store selected size separately
   const [subCurrentProduct, setSubCurrentProduct] = useState(
     subProductData3[0]
   );
-  const [selectedSize, setSelectedSize] = useState(0);
 
   const handleButtonClick9 = (x) => {
-    const selectedProduct = productData3[x];
-    setCurrentProduct(selectedProduct);
+    if (insulationType === 0) {
+      const selectedProduct = productData3[x];
+      setCurrentProduct((prevProduct) => ({
+        ...prevProduct,
+        textName: selectedProduct.textName,
+        image: selectedProduct.image,
+        heading: selectedProduct.heading,
+        sellingPrice: selectedProduct.sellingPrice,
+        Insulated: selectedProduct.Insulated
+      }));
+    } else {
+      const selectedProduct = replaceProductData3[x];
+      setCurrentProduct((prevProduct) => ({
+        ...prevProduct,
+        textName: selectedProduct.textName,
+        image: selectedProduct.image,
+        heading: selectedProduct.heading,
+        Insulated: selectedProduct.Insulated
+      }));
+    }
+
   };
-
-  const [insulationType, setInsulationType] = useState(0);
-
-  const handleInsulateClick = (type) => {
-    setInsulationType(type);
-  };
-
-  const [imageScale, setImageScale] = useState(1);
 
   const handleSubProductClick = (x) => {
-    const subSelectedProduct = subProductData3[x];
-    setSubCurrentProduct(subSelectedProduct);
+    const subSelectedProduct = insulationType === 0 ? subProductData3[x] : subSecondProductData3[x];
+
     const updatedProduct = {
       ...currentProduct,
-      // costPrice: subSelectedProduct.costPrice,
+      costPrice: subSelectedProduct.costPrice,
       sellingPrice: subSelectedProduct.sellingPrice,
       toCart: subSelectedProduct.toCart,
       textPrice: subSelectedProduct.textPrice,
@@ -49,18 +61,48 @@ const Product3 = () => {
       title: subCurrentProduct.title,
     };
     setCurrentProduct(updatedProduct);
+
     // Apply image scale for 25oz
     if (x === 1) {
-      setImageScale(1.1);
+      setImageScale(1.05)
+      setSelectedSize(1); // Update selected size only when a new size is selected
     } else {
       setImageScale(1);
+      setSelectedSize(0);
     }
   };
 
-  const handleAddToCartClick = () => {
-    addToCart(currentProduct);
+  const [imageScale, setImageScale] = useState(1);
+  const [insulationType, setInsulationType] = useState(0);
+
+  const handleInsulateClick = (type) => {
+    setInsulationType(type);
+    if (type === 0) {
+      // If insulation type is 0 (not insulated), set subCurrentProduct to subSecondProductData3
+      setSubCurrentProduct(subSecondProductData3[selectedSize]);
+    } else {
+      // If insulation type is not 0, set subCurrentProduct to subProductData3
+      setSubCurrentProduct(subProductData3[selectedSize]);
+    }
   };
 
+  //   const handleInsulatedButtonClick = (x) => {};
+
+  const handleAddToCartClick = () => {
+    const selectedProduct = insulationType === 0 ? subProductData3[selectedSize] : subSecondProductData3[selectedSize];
+    const updatedProduct = {
+      ...currentProduct,
+      costPrice: selectedProduct.costPrice,
+      sellingPrice: selectedProduct.sellingPrice,
+      toCart: selectedProduct.toCart,
+      textPrice: selectedProduct.textPrice,
+      save: selectedProduct.save,
+      title: selectedProduct.title,
+    };
+
+    // Add the updated product to the cart
+    addToCart(updatedProduct);
+  };
   return (
     <section className="first_bootle-buy-page" id="bottle3">
       <div className="buy-page_content3">
@@ -183,40 +225,85 @@ const Product3 = () => {
           </div>
 
           <p id="size">size</p>
-          <div className="buy_page_butt">
-            <div className="radio__in_button">
-              <input
-                onClick={() => {
-                  handleSubProductClick(0);
-                }}
-                type="radio"
-                id="a17"
-                name="check-substitution-2"
-              />
-              <label
-                className="btn btn-default radio__in_buttonlabel"
-                htmlFor="a17"
-              >
-                17 Oz
-              </label>
-            </div>
-            <div className="radio__in_button">
-              <input
-                onClick={() => {
-                  handleSubProductClick(1);
-                }}
-                type="radio"
-                id="a25"
-                name="check-substitution-2"
-              />
-              <label
-                className="btn btn-default radio__in_buttonlabel"
-                htmlFor="a25"
-              >
-                25 Oz
-              </label>
-            </div>
-          </div>
+          {insulationType === 0 ? (
+            <>
+              <div className="buy_page_butt">
+                <div className="radio__in_button">
+                  <input
+                    onClick={() => {
+                      handleSubProductClick(0);
+                    }}
+                    type="radio"
+                    id="a17"
+                    name="check-substitution-2"
+                  />
+                  <label
+                    className="btn btn-default radio__in_buttonlabel"
+                    htmlFor="a17"
+                  >
+                    17 Oz
+                  </label>
+                </div>
+                <div className="radio__in_button">
+                  <input
+                    onClick={() => {
+                      handleSubProductClick(1);
+                    }}
+                    type="radio"
+                    id="a25"
+                    name="check-substitution-2"
+                  />
+                  <label
+                    className="btn btn-default radio__in_buttonlabel"
+                    htmlFor="a25"
+                  >
+                    25 Oz
+                  </label>
+                </div>
+              </div>
+
+
+
+            </>
+          ) : (
+            <>
+              <div className="buy_page_butt">
+                <div className="radio__in_button">
+                  <input
+                    onClick={() => {
+                      handleSubProductClick(0);
+                    }}
+                    type="radio"
+                    id="a17"
+                    name="check-substitution-2"
+                  />
+                  <label
+                    className="btn btn-default radio__in_buttonlabel"
+                    htmlFor="a17"
+                  >
+                    24 Oz
+                  </label>
+                </div>
+                <div className="radio__in_button">
+                  <input
+                    onClick={() => {
+                      handleSubProductClick(1);
+                    }}
+                    type="radio"
+                    id="a25"
+                    name="check-substitution-2"
+                  />
+                  <label
+                    className="btn btn-default radio__in_buttonlabel"
+                    htmlFor="a25"
+                  >
+                    32 Oz
+                  </label>
+                </div>
+              </div>
+            </>
+          )}
+
           <div className="bottle_color_change">
             <fieldset>
               <legend>{currentProduct.textName}</legend>
