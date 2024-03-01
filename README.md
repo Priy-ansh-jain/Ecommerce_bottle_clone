@@ -2,7 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-https://app.netlify.com/sites/larq-ecommerce-bottleclone/configuration/general
+url to visit
+https://larq-ecommerce-bottleclone.netlify.app/
+
+
 
 ## Available Scripts
 
