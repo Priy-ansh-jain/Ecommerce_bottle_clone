@@ -3,9 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 url to visit
-https://larq-clone-ecommerce.netlify.app/
-
-
+https://ecommerce-larqclone.netlify.app/
 
 ## Available Scripts
 
