@@ -25,7 +25,7 @@
 }
 .third ul {
   display: flex;
-  gap: 40px;
+  gap: 20px;
 }
 
 .container {
@@ -407,6 +407,7 @@
   padding-bottom: 20px;
   width: 100%;
   right: 0;
+  z-index: 999;
   justify-content: space-between;
 }
 
@@ -478,18 +479,21 @@
 }
 
 .shop__image {
-  gap: 20px;
+  height: 100%;
+  gap: 30px;
   display: flex;
 }
 .shop__image img {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
 }
 .shop__imageTwo {
-  gap: 20px;
+  gap: 50px;
   display: flex;
-  gap: 20px;
+  width: 100%;
 }
+
 .shop__imageTwo img {
   height: 100%;
   width: 100%;
@@ -501,20 +505,20 @@
     rgb(202, 202, 202) 0%,
     rgba(255, 255, 255, 1) 100%
   );
+  padding-bottom: 30px;
 }
-.inner__home-img {
+/* .inner__home-img {
   width: 100%;
   height: 100%;
+  padding: 10px;
 }
 .inner__home-img {
   width: 330px;
-  height: 330px;
-}
-.shop__imageOne,
-.shop__imageFour {
+  height: 100%;
+} */
+.shop__imageOne {
   gap: 20px;
   display: flex;
-  gap: 20px;
 }
 .shop__imageOne img,
 .shop__imageFour img {
@@ -523,22 +527,28 @@
   border-radius: 20px;
   padding-bottom: 20px;
 }
+.shop__imageFour {
+  display: flex;
+  gap: 20px;
+}
 
 .shop__imageOne img:nth-child(1),
 .shop__imageFour img:nth-child(1) {
-  background: rgb(240, 229, 234);
+  background: rgb(231, 231, 231);
   background: linear-gradient(
     90deg,
-    rgb(252, 246, 249) 0%,
-    rgb(202, 202, 202) 0%,
-    rgba(255, 255, 255, 1) 100%
+    rgb(236, 236, 236) 0%,
+    rgb(236, 236, 236) 0%,
+    rgb(241, 241, 241) 100%
   );
 }
 
 .diff__link {
   display: grid;
-  padding-top: 80px;
+  padding-top: 180px;
+  color: #1c77b8;
 }
+
 .sub__links {
   display: grid;
   width: 10rem;
@@ -570,14 +580,13 @@
 
 .cart-count {
   position: absolute;
-  top: -25px;
+  top: -23px;
   right: -12px;
   background-color: rgb(255, 255, 255);
   color: rgb(6, 37, 64);
   border-radius: 100%;
   padding: 6px;
   width: 100%;
-  height: 100%;
   font-size: 12px;
   display: flex;
   font-weight: 900;
@@ -608,6 +617,9 @@
     background-color: #e0e0e0;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
       0 1px rgba(255, 255, 255, 0.08);
+  }
+  .shop__imageTwo img {
+    padding-bottom: 30px;
   }
 }
 @media screen and (max-width: 1390px) {
@@ -644,6 +656,9 @@
   .cart_content {
     width: 470px;
   }
+  .shop__imageTwo img {
+    padding-bottom: 30px;
+  }
 }
 @media screen and (max-width: 1290px) {
   .page__one {
@@ -667,7 +682,7 @@
     left: 0;
     padding-left: 80px;
     padding-right: 80px;
-    height: 50vh;
+    height: 60vh;
     background-size: cover;
     padding-top: 30px;
     padding-bottom: 20px;
@@ -689,6 +704,14 @@
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
       0 1px rgba(255, 255, 255, 0.08);
   }
+  .shop__imageTwo img {
+    padding-bottom: 30px;
+  }
+  .diff__link {
+    display: grid;
+    padding-top: 130px;
+    color: #1c77b8;
+  }
 }
 @media screen and (max-width: 1095px) {
   .hovered-element {
@@ -697,7 +720,7 @@
     left: 0;
     padding-left: 2rem;
     padding-right: 2rem;
-    height: 50vh;
+    height: 60vh;
     background-size: cover;
     padding-top: 30px;
     padding-bottom: 20px;
@@ -717,6 +740,9 @@
       rgb(202, 202, 202) 0%,
       rgba(255, 255, 255, 1) 100%
     );
+  }
+  .shop__imageTwo img {
+    padding-bottom: 30px;
   }
 }
 @media screen and (max-width: 880px) {
@@ -958,17 +984,50 @@
     height: 20vh;
   }
 }
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 460px) {
   .cart_content {
     width: 100%;
   }
+  .progress__bar {
+    margin: 0 auto;
+    height: 10px;
+    min-width: 310px;
+    max-width: 100%;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+      0 1px rgba(255, 255, 255, 0.08);
+  }
 }
-
+@media screen and (max-width: 385px) {
+  .progress__bar {
+    margin: 0 auto;
+    height: 10px;
+    min-width: 300px;
+    max-width: 100%;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+      0 1px rgba(255, 255, 255, 0.08);
+  }
+}
 @media screen and (max-width: 360px) {
   .third {
     gap: 20px;
   }
   .third ul {
     gap: 20px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .progress__bar {
+    margin: 0 auto;
+    height: 10px;
+    min-width: 100%;
+    max-width: 100%;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+      0 1px rgba(255, 255, 255, 0.08);
   }
 }

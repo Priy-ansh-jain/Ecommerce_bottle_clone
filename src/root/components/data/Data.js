@@ -158,6 +158,7 @@ export const subProductData3 = [
     textPrice: "$29.70",
     toCart: "Add to cart-$99.00",
     title: "17 Oz",
+    save: "0",
     insulated: "Insulated",
   },
   {
@@ -167,6 +168,7 @@ export const subProductData3 = [
     toCart: "Add to cart-$118.00",
     textPrice: "$29.00",
     title: "25 Oz",
+    save: "0",
     insulated: "Insulated",
   },
 ];
@@ -203,6 +205,7 @@ export const replaceProductData3 = [
     toCart: "Add to cart-$89.00",
     image:
       "https://res.cloudinary.com/larq/images/w_2460,h_2560/f_auto,q_auto/v1666085116/LARQ-Bottle-Filtered_MSW_BO_01A/LARQ-Bottle-Filtered_MSW_BO_01A.jpg?_i=AA",
+    Insulated: "Not Insulated",
   },
   {
     id: 2,
@@ -212,6 +215,7 @@ export const replaceProductData3 = [
     toCart: "Add to cart-$89.00",
     image:
       "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1638225431/p2-wd-24-2-white-q_30815ebeb/p2-wd-24-2-white-q_30815ebeb.jpg?_i=AA",
+    Insulated: "Not Insulated",
   },
   {
     id: 3,
@@ -221,6 +225,7 @@ export const replaceProductData3 = [
     toCart: "Add to cart-$89.00",
     image:
       "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1638225360/p2-wp-24-2-white-q/p2-wp-24-2-white-q.jpg?_i=AA",
+    Insulated: "Not Insulated",
   },
   {
     id: 4,
@@ -230,6 +235,7 @@ export const replaceProductData3 = [
     toCart: "Add to cart-$89.00",
     image:
       "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1638225361/p2-bp-24-2-white-q/p2-bp-24-2-white-q.jpg?_i=AA",
+    Insulated: "Not Insulated",
   },
   {
     id: 5,
@@ -239,6 +245,7 @@ export const replaceProductData3 = [
     sellingPrice: "89.00",
     image:
       "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1638225363/p2-wc-24-2-white-q/p2-wc-24-2-white-q.jpg?_i=AA",
+    Insulated: "Not Insulated",
   },
 ];
 

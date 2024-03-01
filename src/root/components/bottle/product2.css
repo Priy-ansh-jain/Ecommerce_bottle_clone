@@ -477,7 +477,7 @@ input[type="radio"]:checked::before {
   .radio__in_button2 {
     padding-bottom: 20px;
     width: 100%;
-    height: 9vh;
+    height: 5.5vh;
     display: flex;
     justify-content: center;
     align-items: left;
@@ -487,7 +487,7 @@ input[type="radio"]:checked::before {
   .radio__in_button2 label,
   .radio__in_button2 input {
     width: 100%;
-    height: 9vh;
+    height: 5vh;
     color: rgb(14, 56, 68);
     background-color: white;
     font-weight: 800;
@@ -504,7 +504,7 @@ input[type="radio"]:checked::before {
 
   .radio__in_button2 input[type="radio"]:checked + .radio__in_button2 label {
     width: 100%;
-    height: 9vh;
+    height: 5vh;
     color: rgb(14, 56, 68);
     background-color: white;
     font-weight: 800;

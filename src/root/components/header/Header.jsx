@@ -72,14 +72,10 @@ const Header = () => {
   const closeCart = () => {
     setIsCartOpen(false);
   };
-  // const handleSignOut = () => {
-
-  //   setIsLoggedIn(false); };
 
   const navigate = useNavigate();
   const [authenticated, setAuthenticated] = useState(false); // State to track authentication status
 
-  // Initialize Appwrite client and account
   const client = new Client()
     .setEndpoint("https://cloud.appwrite.io/v1")
     .setProject("659e92e6eb1b45d3c54c");
@@ -90,7 +86,6 @@ const Header = () => {
     checkAuthentication();
   }, []); // Empty dependency array ensures this effect runs only once on mount
 
-  // Function to check if the user is authenticated
   const checkAuthentication = async () => {
     try {
       await account.get(); // If successful, the user is authenticated
@@ -101,9 +96,8 @@ const Header = () => {
   };
   const { clearCartData } = useCart();
   const handleLogout = async () => {
-
     try {
-      await account.deleteSession("current"); // Delete the current session
+      await account.deleteSession("current");
       setAuthenticated(false); // Update authentication status
       clearCartData();
       navigate("/signin"); // Redirect to the sign-in page
@@ -143,11 +137,11 @@ const Header = () => {
                       >
                         <div className="sub_element">
                           <div className="butt__sub ">
-                            <button>
-                              {" "}
-                              Explore <FaAngleRight />
-                            </button>
-
+                            <Link to="/shopLarq">
+                              <button>
+                                Explore <FaAngleRight />
+                              </button>
+                            </Link>
                             <button>
                               {" "}
                               Holiday-Sets <FaAngleRight />
@@ -161,7 +155,7 @@ const Header = () => {
                           <div className="diff__link">
                             <a
                               style={{
-                                color: "lightblue",
+                                color: "grey",
                                 fontSize: 10,
                                 marginBottom: 10,
                                 paddingLeft: 12,
@@ -171,16 +165,10 @@ const Header = () => {
                             >
                               LEARN MORE
                             </a>
-                            <a
-                              style={{ color: "lightblue", paddingLeft: 12 }}
-                              href=""
-                            >
+                            <a style={{ paddingLeft: 12 }} href="">
                               PureVis™ technology
                             </a>
-                            <a
-                              style={{ color: "lightblue", paddingLeft: 12 }}
-                              href=""
-                            >
+                            <a style={{ paddingLeft: 12 }} href="">
                               Nano Zero technology
                             </a>
                           </div>
@@ -269,7 +257,7 @@ const Header = () => {
                           <div className="diff__link">
                             <a
                               style={{
-                                color: "lightblue",
+                                color: "grey",
                                 fontSize: 10,
                                 marginBottom: 10,
                                 paddingLeft: 12,
@@ -279,16 +267,10 @@ const Header = () => {
                             >
                               LEARN MORE
                             </a>
-                            <a
-                              style={{ color: "lightblue", paddingLeft: 12 }}
-                              href=""
-                            >
+                            <a style={{ paddingLeft: 12 }} href="">
                               PureVis™ technology
                             </a>
-                            <a
-                              style={{ color: "lightblue", paddingLeft: 12 }}
-                              href=""
-                            >
+                            <a style={{ paddingLeft: 12 }} href="">
                               Nano Zero technology
                             </a>
                           </div>
@@ -386,7 +368,7 @@ const Header = () => {
                           <div className="diff__link">
                             <a
                               style={{
-                                color: "lightblue",
+                                color: "grey",
                                 fontSize: 10,
                                 marginBottom: 10,
                                 paddingLeft: 12,
@@ -396,16 +378,10 @@ const Header = () => {
                             >
                               LEARN MORE
                             </a>
-                            <a
-                              style={{ color: "lightblue", paddingLeft: 12 }}
-                              href=""
-                            >
+                            <a style={{ paddingLeft: 12 }} href="">
                               PureVis™ technology
                             </a>
-                            <a
-                              style={{ color: "lightblue", paddingLeft: 12 }}
-                              href=""
-                            >
+                            <a style={{ paddingLeft: 12 }} href="">
                               Nano Zero technology
                             </a>
                           </div>
@@ -487,7 +463,7 @@ const Header = () => {
                           <div className="diff__link">
                             <a
                               style={{
-                                color: "lightblue",
+                                color: "grey",
                                 fontSize: 10,
                                 marginBottom: 10,
                                 paddingLeft: 12,
@@ -497,16 +473,10 @@ const Header = () => {
                             >
                               LEARN MORE
                             </a>
-                            <a
-                              style={{ color: "lightblue", paddingLeft: 12 }}
-                              href=""
-                            >
+                            <a style={{ paddingLeft: 12 }} href="">
                               PureVis™ technology
                             </a>
-                            <a
-                              style={{ color: "lightblue", paddingLeft: 12 }}
-                              href=""
-                            >
+                            <a style={{ paddingLeft: 12 }} href="">
                               Nano Zero technology
                             </a>
                           </div>
@@ -639,16 +609,14 @@ const Header = () => {
               </div>
 
               {authenticated ? ( // If authenticated, show logout button
-
-                <div className="log__butt"><button onClick={handleLogout}>Logout</button></div>
+                <div className="log__butt">
+                  <button onClick={handleLogout}>Logout</button>
+                </div>
               ) : (
                 <div className="fa__icon-user">
                   <li>
                     <Link to="/signin">
-                      <FaUser
-
-                        className="faUser"
-                      />
+                      <FaUser className="faUser" />
                     </Link>
                   </li>
                 </div>

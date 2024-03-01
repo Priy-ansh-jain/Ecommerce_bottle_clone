@@ -33,7 +33,7 @@ const Product3 = () => {
         image: selectedProduct.image,
         heading: selectedProduct.heading,
         sellingPrice: selectedProduct.sellingPrice,
-        Insulated: selectedProduct.Insulated
+        Insulated: selectedProduct.Insulated,
       }));
     } else {
       const selectedProduct = replaceProductData3[x];
@@ -42,14 +42,14 @@ const Product3 = () => {
         textName: selectedProduct.textName,
         image: selectedProduct.image,
         heading: selectedProduct.heading,
-        Insulated: selectedProduct.Insulated
+        Insulated: selectedProduct.Insulated,
       }));
     }
-
   };
 
   const handleSubProductClick = (x) => {
-    const subSelectedProduct = insulationType === 0 ? subProductData3[x] : subSecondProductData3[x];
+    const subSelectedProduct =
+      insulationType === 0 ? subProductData3[x] : subSecondProductData3[x];
 
     const updatedProduct = {
       ...currentProduct,
@@ -64,7 +64,7 @@ const Product3 = () => {
 
     // Apply image scale for 25oz
     if (x === 1) {
-      setImageScale(1.05)
+      setImageScale(1.05);
       setSelectedSize(1); // Update selected size only when a new size is selected
     } else {
       setImageScale(1);
@@ -74,22 +74,37 @@ const Product3 = () => {
 
   const [imageScale, setImageScale] = useState(1);
   const [insulationType, setInsulationType] = useState(0);
-
   const handleInsulateClick = (type) => {
     setInsulationType(type);
     if (type === 0) {
-      // If insulation type is 0 (not insulated), set subCurrentProduct to subSecondProductData3
-      setSubCurrentProduct(subSecondProductData3[selectedSize]);
-    } else {
       // If insulation type is not 0, set subCurrentProduct to subProductData3
       setSubCurrentProduct(subProductData3[selectedSize]);
+      // Update current product image when switching to "Insulated"
+      setCurrentProduct((prevProduct) => ({
+        ...prevProduct,
+        image: productData3[0].image,
+        sellingPrice:productData3[0].sellingPrice
+       
+      }));
+    } else {
+      // If insulation type is 0 (not insulated), set subCurrentProduct to subSecondProductData3
+      setSubCurrentProduct(subSecondProductData3[selectedSize]);
+      // Update current product image when switching to "Not Insulated"
+      setCurrentProduct((prevProduct) => ({
+        ...prevProduct,
+        image: replaceProductData3[0].image, // Update image to the first product in replaceProductData3
+        sellingPrice:replaceProductData3[0].sellingPrice
+      }));
     }
   };
 
   //   const handleInsulatedButtonClick = (x) => {};
 
   const handleAddToCartClick = () => {
-    const selectedProduct = insulationType === 0 ? subProductData3[selectedSize] : subSecondProductData3[selectedSize];
+    const selectedProduct =
+      insulationType === 0
+        ? subProductData3[selectedSize]
+        : subSecondProductData3[selectedSize];
     const updatedProduct = {
       ...currentProduct,
       costPrice: selectedProduct.costPrice,
@@ -144,9 +159,10 @@ const Product3 = () => {
           </div>
 
           <div className="Insulated_bottle">
-            <input onClick={() => {
-              handleInsulateClick(0);
-            }}
+            <input
+              onClick={() => {
+                handleInsulateClick(0);
+              }}
               type="radio"
               id="insulated"
               className="insulated_one"
@@ -182,15 +198,15 @@ const Product3 = () => {
               </div>
             </label>
 
-            <input onClick={() => {
-              handleInsulateClick(1);
-            }}
+            <input
+              onClick={() => {
+                handleInsulateClick(1);
+              }}
               type="radio"
               id="notInsulated"
               className="insulated_two"
               name="insulation"
             />
-
 
             <label htmlFor="notInsulated" className="insulated_label">
               <div className="insulated_image">
@@ -221,7 +237,6 @@ const Product3 = () => {
                 </span>
               </div>
             </label>
-
           </div>
 
           <p id="size">size</p>
@@ -261,9 +276,6 @@ const Product3 = () => {
                   </label>
                 </div>
               </div>
-
-
-
             </>
           ) : (
             <>
@@ -370,11 +382,14 @@ const Product3 = () => {
               ) : (
                 // Render the second set of bottle color input buttons
                 <>
-                  <div className="radiooo1" onClick={() => {
-                    handleButtonClick9(0);
-                  }} style={{}}>
+                  <div
+                    className="radiooo1"
+                    onClick={() => {
+                      handleButtonClick9(0);
+                    }}
+                    style={{}}
+                  >
                     <input
-
                       type="radio"
                       id="bott1"
                       name="flavor"

@@ -23,6 +23,7 @@ import Product4 from "./root/components/bottle/Product4";
 import Product5 from "./root/components/bottle/Product5";
 import Product7 from "./root/components/bottle/Product7";
 import CheckOut from "./root/components/checkout/CheckOut";
+import Tecnolo from "./root/components/techno/Tecnolo";
 
 // import Trending2 from "./root/components/shopall/Trending2";
 // import Cart from "./root/components/cart/Cart";
@@ -32,6 +33,16 @@ const App = () => {
     <div>
       {/* <Header /> */}
       <Routes>
+        <Route
+          path="/techno"
+          element={
+            <>
+              <Header />
+              <Tecnolo />
+              <Footer />
+            </>
+          }
+        />
         <Route
           path="/"
           element={
@@ -76,8 +87,8 @@ const App = () => {
         <Route>
           <Route
             path="/checkout"
-            element={ 
-              <> 
+            element={
+              <>
                 <Header />
                 <CheckOut />
               </>
@@ -173,7 +184,6 @@ const App = () => {
             </>
           }
         />
-        {/* <Route path="/Cart" element={<Cart />}></Route> */}
       </Routes>
       {/* <Footer /> */}
       <ScrollButton />

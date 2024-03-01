@@ -67,15 +67,24 @@ const Product6 = () => {
   };
 
   const [insulationType, setInsulationType] = useState(0);
-
   const handleInsulateClick = (type) => {
     setInsulationType(type);
     if (type === 0) {
-      // If insulation type is 0 (not insulated), set subCurrentProduct to subSecondProductData3
-      setSubCurrentProduct(subSecondProductData6[selectedSize]);
-    } else {
       // If insulation type is not 0, set subCurrentProduct to subProductData3
       setSubCurrentProduct(subProductData6[selectedSize]);
+      // Update current product image when switching to "Insulated"
+      setCurrentProduct((prevProduct) => ({
+        ...prevProduct,
+        image: productData6[0].image, // Update image to the first product in productData3
+      }));
+    } else {
+      // If insulation type is 0 (not insulated), set subCurrentProduct to subSecondProductData3
+      setSubCurrentProduct(subSecondProductData6[selectedSize]);
+      // Update current product image when switching to "Not Insulated"
+      setCurrentProduct((prevProduct) => ({
+        ...prevProduct,
+        image: replaceProductData6[0].image, // Update image to the first product in replaceProductData3
+      }));
     }
   };
 

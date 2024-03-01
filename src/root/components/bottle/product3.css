@@ -504,6 +504,13 @@ input[type="radio"]:checked::before {
   background-color: #4caf50; /* Change to your desired checked color */
   color: white;
 }
+.radioo1,
+.radioo2,
+.radioo3,
+.radioo4,
+.radioo5{
+margin-top: 5px;
+}
 
 .radioo1 input {
   background-color: #080870;
@@ -535,8 +542,8 @@ input[type="radio"]:checked::before {
 .radiooo3,
 .radiooo4,
 .radiooo5 {
-  margin-top: 30px;
   transform: rotateZ(50deg);
+  margin-top: 5px;
 }
 .radiooo1 input {
   background: rgb(2, 0, 36);

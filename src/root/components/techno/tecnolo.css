@@ -1,0 +1,30 @@
+.technology__page {
+  background: rgb(236, 239, 239);
+  background: radial-gradient(
+    circle,
+    rgba(244, 245, 245, 0.894) 30%,
+    rgba(133, 213, 214, 0) 100%
+  );
+}
+.tech__menu ul {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+.tech__menu li,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: rgb(67, 67, 67);
+}
+.tech__menu {
+  padding-top: 20px;
+}
+.science {
+  display: flex;
+  justify-content: center;
+  color: rgb(13, 98, 119);
+}
+hr {
+  border-color: rgb(255, 255, 255);
+}
