@@ -941,7 +941,6 @@
     flex-direction: column;
     text-align: right;
   }
-
   .image-with-text {
     background: rgb(238, 174, 202);
     background: radial-gradient(
@@ -966,6 +965,11 @@
   .image-with-text img {
     width: 35%;
     height: 20vh;
+  }
+}
+@media screen and (max-width: 494px) {
+  .cart_content {
+    width: 100%;
   }
 }
 @media screen and (max-width: 460px) {
