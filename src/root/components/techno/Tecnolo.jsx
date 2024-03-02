@@ -2,7 +2,11 @@ import React from 'react'
 import Slider from "../slider/Slider"
 import "./tecnolo.css"
 
+
+
 const Technology = () => {
+
+
   return (
     <div>
       <div className='technology__page'>
@@ -21,9 +25,10 @@ const Technology = () => {
         <div className='science'>
           <h1>We've done the science to help you drink brilliantly</h1>
         </div>
-        <div>
-          <Slider />
-        </div>
+     
+          <div>
+            <Slider />
+          </div>
       </div>
     </div>
   )

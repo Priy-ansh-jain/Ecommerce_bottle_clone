@@ -20,6 +20,11 @@ export const imageImg1 = [
         ></path>
       </svg>
     ),
+    techImage:
+      "https://res.cloudinary.com/larq/image/upload/q_auto/v1657115813/assets/spa/v2/tech-page/purevis-tech-image.png",
+    subHeading: "PureVis™",
+    subText:
+      "Proprietary PureVis™ technology improves the quality of your water at home and on the go.",
   },
   {
     id: 2,
@@ -38,6 +43,11 @@ export const imageImg1 = [
         ></path>
       </svg>
     ),
+    techImage:
+      "https://res.cloudinary.com/larq/image/upload/q_auto/v1657116048/assets/spa/v2/tech-page/filters-tech-image.png",
+    subHeading: "Nano Zero",
+    subText:
+      "A new age of filtration is here. Enjoy crisp drinking water at home and on the go.",
   },
   {
     id: 3,
@@ -55,19 +65,24 @@ export const imageImg1 = [
           fill="#F3756D"
         ></path>
         <path
-         fillRule="evenodd"
+          fillRule="evenodd"
           clipRule="evenodd"
           d="M12.889 40.63A20 20 0 0 0 24 44a20.023 20.023 0 0 0 20-20 20 20 0 1 0-31.111 16.63Zm1.07-31.656A18.072 18.072 0 0 1 24 5.928 18.092 18.092 0 0 1 42.072 24 18.072 18.072 0 1 1 13.96 8.974Z"
           fill="#F3756D"
         ></path>
         <path
-         fillRule="evenodd"
+          fillRule="evenodd"
           clipRule="evenodd"
           d="M36.5 37.914 10 11.414 11.414 10l26.5 26.5-1.414 1.414Z"
           fill="#F3756D"
         ></path>
       </svg>
     ),
+    techImage:
+      "https://res.cloudinary.com/larq/image/upload/q_auto/v1657116048/assets/spa/v2/tech-page/filters-tech-image.png",
+    subHeading: "Nano Zero",
+    subText:
+      "A new age of filtration is here. Enjoy crisp drinking water at home and on the go.",
   },
 ];
 
@@ -88,20 +103,26 @@ export const imageImg2 = [
           fill="#F3756D"
         ></path>
         <path
-         fillRule="evenodd"
+          fillRule="evenodd"
           clipRule="evenodd"
           d="M16.65 22.412a2.364 2.364 0 1 1 4.728 0 2.364 2.364 0 0 1-4.729 0Zm2.364-.868a.868.868 0 1 0 0 1.736.868.868 0 0 0 0-1.736ZM22.665 29.116a2.783 2.783 0 1 0 0 5.567 2.783 2.783 0 0 0 0-5.567ZM21.378 31.9a1.287 1.287 0 1 1 2.574 0 1.287 1.287 0 0 1-2.574 0Z"
           fill="#F3756D"
         ></path>
         <path
-         fillRule="evenodd"
+          fillRule="evenodd"
           clipRule="evenodd"
           d="M8.77 7.002a.973.973 0 0 1 1.142.767l.93 4.742c1.75-1.558 3.642-2.193 5.63-2.239 2.23-.05 4.544.641 6.852 1.47.368.132.736.268 1.103.405a8.93 8.93 0 0 1 .66-.37 12.658 12.658 0 0 1 2.83-1.013c2.43-.571 5.94-.727 10.407.792l.743-3.787a.973.973 0 0 1 1.91.375l-5.835 29.71v.004a3.985 3.985 0 0 1-3.919 3.243H17.786c-1.937 0-3.554-1.35-3.945-3.228l-.002-.011L8.003 8.144a.973.973 0 0 1 .767-1.142Zm29.262 6.037c-4.29-1.498-7.578-1.334-9.772-.819-.787.185-1.436.416-1.945.634 1.361.506 2.735.993 4.146 1.374 2.389.644 4.798.954 7.24.498l.331-1.687ZM15.746 37.48l-4.559-23.215c1.677-1.798 3.441-2.455 5.32-2.498 1.928-.044 4.015.558 6.312 1.383.618.221 1.252.46 1.9.704 1.713.644 3.519 1.323 5.352 1.817 2.333.63 4.787.984 7.323.621l-4.162 21.194-.002.008a2.04 2.04 0 0 1-2.007 1.66H17.786c-.995 0-1.83-.682-2.04-1.674Z"
           fill="#F3756D"
         ></path>
       </svg>
     ),
+    techImage:
+      "https://res.cloudinary.com/larq/image/upload/q_auto/v1657116048/assets/spa/v2/tech-page/filters-tech-image.png",
+    subHeading: "Nano Zero",
+    subText:
+      "A new age of filtration is here. Enjoy crisp drinking water at home and on the go.",
   },
+
   {
     id: 2,
     detail: "Eliminate contaminants",
@@ -118,20 +139,26 @@ export const imageImg2 = [
           fill="#F3756D"
         ></path>
         <path
-         fillRule="evenodd"
+          fillRule="evenodd"
           clipRule="evenodd"
           d="M12.889 40.63A20 20 0 0 0 24 44a20.023 20.023 0 0 0 20-20 20 20 0 1 0-31.111 16.63Zm1.07-31.656A18.072 18.072 0 0 1 24 5.928 18.092 18.092 0 0 1 42.072 24 18.072 18.072 0 1 1 13.96 8.974Z"
           fill="#F3756D"
         ></path>
         <path
-         fillRule="evenodd"
+          fillRule="evenodd"
           clipRule="evenodd"
           d="M36.5 37.914 10 11.414 11.414 10l26.5 26.5-1.414 1.414Z"
           fill="#F3756D"
         ></path>
       </svg>
     ),
+    techImage:
+      "https://res.cloudinary.com/larq/image/upload/q_auto/v1657116048/assets/spa/v2/tech-page/filters-tech-image.png",
+    subHeading: "Nano Zero",
+    subText:
+      "A new age of filtration is here. Enjoy crisp drinking water at home and on the go.",
   },
+
   {
     id: 3,
     detail: "Long-lasting filters",
@@ -144,13 +171,18 @@ export const imageImg2 = [
         aria-hidden="true"
       >
         <path
-         fillRule="evenodd"
+          fillRule="evenodd"
           clipRule="evenodd"
           d="M15.775 8a.997.997 0 0 1 1.005.989v3.589c0 .546-.45.989-1.005.989a.998.998 0 0 1-1.007-.989v-3.59c0-.546.45-.988 1.007-.988Zm15.784 0a.998.998 0 0 1 1.006.989v3.589c0 .546-.45.989-1.006.989a.997.997 0 0 1-1.006-.989v-3.59c0-.546.45-.988 1.006-.988Zm-20.365 3.772c-1.209 0-2.182.957-2.182 2.145v2.448h29.31v-2.448c0-1.188-.974-2.145-2.183-2.145H34.5a.997.997 0 0 1-1.006-.989c0-.546.45-.988 1.006-.988h1.64c2.321 0 4.194 1.842 4.194 4.122v21.962c0 2.28-1.874 4.121-4.193 4.121H11.193C8.875 40 7 38.158 7 35.879V13.917c0-2.28 1.874-4.122 4.193-4.122h1.641a.998.998 0 0 1 1.006.988c0 .546-.45.989-1.006.989h-1.64Zm27.127 6.57H9.012v17.537c0 1.187.973 2.144 2.182 2.144h24.945c1.209 0 2.182-.957 2.182-2.144V18.342ZM17.74 10.783c0-.546.45-.988 1.005-.988h9.843a.997.997 0 0 1 1.005.988c0 .546-.45.989-1.005.989h-9.843a.997.997 0 0 1-1.005-.989Zm5.927 11.179a.998.998 0 0 1 1.006.989v3.452h3.513a.997.997 0 0 1 1.005.988c0 .547-.45.989-1.006.989h-3.513v3.453c0 .546-.45.988-1.005.988a.998.998 0 0 1-1.006-.988V28.38h-3.514a.998.998 0 0 1-1.005-.989c0-.546.45-.988 1.006-.988h3.513V22.95c0-.545.45-.988 1.006-.988Z"
           fill="#F3756D"
         ></path>
       </svg>
     ),
+    techImage:
+      "https://res.cloudinary.com/larq/image/upload/q_auto/v1657116048/assets/spa/v2/tech-page/filters-tech-image.png",
+    subHeading: "Nano Zero",
+    subText:
+      "A new age of filtration is here. Enjoy crisp drinking water at home and on the go.",
   },
 ];
 
@@ -177,6 +209,10 @@ export const imageImg3 = [
         ></path>
       </svg>
     ),
+    techImage:
+      "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/v1656348090/assets/spa/v2/tech-page/mobile-app.png",
+    subHeading: "Smart Hydration",
+    subText: "Track your household water consumption, filter life, and more.",
   },
   {
     id: 2,
@@ -190,13 +226,17 @@ export const imageImg3 = [
         aria-hidden="true"
       >
         <path
-         fillRule="evenodd"
+          fillRule="evenodd"
           clipRule="evenodd"
           d="M13.275 11.585a4.585 4.585 0 1 1 8.02 3.037l6.467 9.07a4.569 4.569 0 0 1 1.86-.394c1.163 0 2.225.433 3.034 1.147l4.514-3.608a4.585 4.585 0 1 1 1.226 1.716l-4.521 3.613a4.585 4.585 0 1 1-7.79-1.199l-6.51-9.13a4.573 4.573 0 0 1-2.72.222L9.425 32.417a4.585 4.585 0 1 1-1.908-.892l7.442-16.39a4.576 4.576 0 0 1-1.685-3.55Zm4.585-2.479a2.479 2.479 0 1 0 0 4.957 2.479 2.479 0 0 0 0-4.957ZM6.585 33.536a2.479 2.479 0 1 0 0 4.957 2.479 2.479 0 0 0 0-4.957Zm20.559-5.653a2.479 2.479 0 1 1 4.957 0 2.479 2.479 0 0 1-4.957 0Zm14.271-11.259a2.479 2.479 0 1 0 0 4.957 2.479 2.479 0 0 0 0-4.957Z"
           fill="#F3756D"
         ></path>
       </svg>
     ),
+    techImage:
+      "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/v1656348090/assets/spa/v2/tech-page/mobile-app.png",
+    subHeading: "Smart Hydration",
+    subText: "Track your household water consumption, filter life, and more.",
   },
   {
     id: 3,
@@ -215,5 +255,9 @@ export const imageImg3 = [
         ></path>
       </svg>
     ),
+    techImage:
+      "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/v1656348090/assets/spa/v2/tech-page/mobile-app.png",
+    subHeading: "Smart Hydration",
+    subText: "Track your household water consumption, filter life, and more.",
   },
 ];

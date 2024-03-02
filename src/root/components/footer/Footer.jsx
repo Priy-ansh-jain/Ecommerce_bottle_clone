@@ -20,9 +20,9 @@ const Footer = () => {
             subscribe.
           </h3>
           <div className="email__input">
-            <input type="email" id=""  placeholder="Email address" />
-            <b> <FaArrowRight/></b>
-           
+            <input type="email" id="" placeholder="Email address" />
+            <b> <FaArrowRight /></b>
+
           </div>
 
           <div className="footer__icon">

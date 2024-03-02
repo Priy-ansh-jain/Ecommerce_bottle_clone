@@ -600,7 +600,9 @@ const Header = () => {
               <div className="three">
                 <ul>
                   <li>
+                    {/* <Link to="/techno"> */}
                     <a href="">TECHNOLOGY</a>
+                    {/* </Link> */}
                   </li>
                   <li>
                     <a href="">FAQ</a>

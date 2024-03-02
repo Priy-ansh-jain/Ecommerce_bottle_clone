@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Purification from "../purification/Purification";
+import Breeze from "../slider/Breeze";
 
 const ShopAll = () => {
   const settings = {
@@ -116,7 +117,7 @@ const ShopAll = () => {
       </div>
       <div className="Shop__all_sub_Page">
         <div><Purification /></div>
-        <div></div>
+        <div><Breeze /></div>
       </div>
     </section>
   );

@@ -165,7 +165,6 @@ hr {
   font-weight: 800;
 }
 
-
 @media screen and (max-width: 470px) {
   .cart {
     margin-top: 20px;
@@ -193,8 +192,8 @@ hr {
   }
 }
 @media screen and (max-width: 1290px) {
-.product__cart-image {
-  background-color: rgb(236, 236, 236);
-  width: 100px;
-}
+  .product__cart-image {
+    background-color: rgb(236, 236, 236);
+    width: 100px;
+  }
 }
