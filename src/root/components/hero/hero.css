@@ -12,10 +12,6 @@
 .home__image::after {
   content: "";
   position: absolute;
-<<<<<<< HEAD
-=======
-  left: 0;
->>>>>>> ef72a9dc3945b0d8884f68e0e20ab13413635e23
   width: 100%;
   height: 100%;
   background: linear-gradient(
@@ -25,11 +21,6 @@
     rgba(21, 58, 91, 0.1) 66.67%,
     rgba(21, 58, 91, 0.8) 100%
   );
-<<<<<<< HEAD
-  bottom: 0;
-=======
-
->>>>>>> ef72a9dc3945b0d8884f68e0e20ab13413635e23
 }
 .home__items {
   display: flex;
